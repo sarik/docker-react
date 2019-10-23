@@ -8,6 +8,8 @@ before_install:
 script:
   - docker run -e CI=true sarik123/docker-react npm run test -- --coverage
 
+#by In a single container application where there is a Dockerfile in the root of the project,
+#EBS will look for it and use it automatically to build the container.
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
